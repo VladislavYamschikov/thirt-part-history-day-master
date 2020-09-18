@@ -59,9 +59,23 @@ header {
   height: 300px;
   background-color: #863636;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+.slider-main .subsidiary-slide .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-main .subsidiary-slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
 }
 .slider-main .center-slide {
   width: 600px;
@@ -71,12 +85,20 @@ header {
 }
 
 .text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Łucznik 1303 Plus;
+  width: 600px;
+  line-height: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  font-family: "Łucznik 1303 Plus", serif;
   font-size: 20px;
   line-height: 23px;
   text-align: justify;
   color: #000000;
+}
+
+.slide .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
